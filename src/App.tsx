@@ -22,6 +22,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Author from './pages/Author';
 
 setupIonicReact();
 
@@ -36,7 +37,10 @@ const App: React.FC = () => (
           <Home />
         </Route>
         <Route path="/message/:id">
-           <ViewMessage />
+          <ViewMessage />
+        </Route>
+        <Route path="/author/:id">
+          <Author />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

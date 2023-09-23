@@ -39,8 +39,11 @@ function ViewMessage() {
       <IonContent fullscreen>
         {message ? (
           <>
-            <IonItem>
-              <IonIcon aria-hidden="true" icon={personCircle} color="primary"></IonIcon>
+            <IonItem routerLink={`/author/${message.author}`}>
+              <IonIcon
+                aria-hidden="true"
+                icon={personCircle}
+                color="primary"></IonIcon>
               <IonLabel className="ion-text-wrap">
                 <h2>
                   {message.fromName}
